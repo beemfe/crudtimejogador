@@ -8,6 +8,15 @@ public class Time {
     private int codigo;
     private String nome;
     private String cidade;
+    private String dataFundacao;
+
+    public String getDataFundacao() {
+        return dataFundacao;
+    }
+
+    public void setDataFundacao(String dataFundacao) {
+        this.dataFundacao = dataFundacao;
+    }
 
     public int getCodigo() {
         return codigo;
@@ -35,6 +44,6 @@ public class Time {
 
     @Override
     public String toString() {
-        return codigo + " - " + nome + " - " + cidade;
+        return codigo + " - " + nome + " - " + cidade + " - " + dataFundacao;
     }
 }
