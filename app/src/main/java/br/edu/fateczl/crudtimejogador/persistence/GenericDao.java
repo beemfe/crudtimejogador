@@ -13,7 +13,7 @@ public class GenericDao extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
 
     private static final String CREATE_TABLE_TIME =
-            "CREATE TABLE time (codigo INTEGER PRIMARY KEY, nome TEXT, cidade TEXT)";
+            "CREATE TABLE time (codigo INTEGER PRIMARY KEY, nome TEXT, cidade TEXT,dataFundacao TEXT)";
     private static final String CREATE_TABLE_JOGADOR =
             "CREATE TABLE jogador (id INTEGER PRIMARY KEY, nome TEXT, dataNasc TEXT, " +
                     "altura REAL, peso REAL, idTime INTEGER, " +
