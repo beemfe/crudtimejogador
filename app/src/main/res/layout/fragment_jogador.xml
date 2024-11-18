@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etIdJogador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="ID do Jogador"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNomeJogador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nome do Jogador"
+        android:minHeight="48dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etIdJogador" />
+
+    <EditText
+        android:id="@+id/etDataNascJogador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Data de Nascimento (dd/MM/yyyy)"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNomeJogador" />
+
+    <EditText
+        android:id="@+id/etAlturaJogador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Altura"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etDataNascJogador" />
+
+    <EditText
+        android:id="@+id/etPesoJogador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Peso"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etAlturaJogador" />
+
+    <Spinner
+        android:id="@+id/spTimeJogador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPesoJogador" />
+
+    <Button
+        android:id="@+id/btnInserirJogador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Inserir"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnAtualizarJogador"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spTimeJogador" />
+
+    <Button
+        android:id="@+id/btnAtualizarJogador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Atualizar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnInserirJogador"
+        app:layout_constraintTop_toTopOf="@id/btnInserirJogador" />
+
+    <Button
+        android:id="@+id/btnExcluirJogador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Excluir"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnBuscarJogador"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnInserirJogador" />
+
+    <Button
+        android:id="@+id/btnBuscarJogador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnExcluirJogador"
+        app:layout_constraintTop_toTopOf="@id/btnExcluirJogador" />
+
+    <Button
+        android:id="@+id/btnListarJogador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Listar"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnExcluirJogador" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnListarJogador">
+
+        <TextView
+            android:id="@+id/tvListaJogadores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

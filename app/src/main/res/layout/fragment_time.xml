@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etCodigoTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Código do Time"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNomeTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nome do Time"
+        android:minHeight="48dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etCodigoTime" />
+
+    <EditText
+        android:id="@+id/etDataFundacaoTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Data de Fundação (dd/MM/yyyy)"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNomeTime" />
+
+    <Button
+        android:id="@+id/btnInserirTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Inserir"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnAtualizarTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etDataFundacaoTime" />
+
+    <Button
+        android:id="@+id/btnAtualizarTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Atualizar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnInserirTime"
+        app:layout_constraintTop_toTopOf="@id/btnInserirTime" />
+
+    <Button
+        android:id="@+id/btnExcluirTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Excluir"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnBuscarTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnInserirTime" />
+
+    <Button
+        android:id="@+id/btnBuscarTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnExcluirTime"
+        app:layout_constraintTop_toTopOf="@id/btnExcluirTime" />
+
+    <Button
+        android:id="@+id/btnListarTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Listar"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnExcluirTime" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnListarTime">
+
+        <TextView
+            android:id="@+id/tvListaTimes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
