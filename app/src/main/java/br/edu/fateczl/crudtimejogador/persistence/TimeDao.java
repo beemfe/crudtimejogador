@@ -37,6 +37,7 @@ public class TimeDao implements ICRUDDao<Time> {
         values.put("codigo", time.getCodigo());
         values.put("nome", time.getNome());
         values.put("cidade", time.getCidade());
+        values.put("dataFundacao", time.getDataFundacao());
 
         db.insert("time", null, values);
     }
@@ -46,6 +47,7 @@ public class TimeDao implements ICRUDDao<Time> {
         ContentValues values = new ContentValues();
         values.put("nome", time.getNome());
         values.put("cidade", time.getCidade());
+        values.put("dataFundacao", time.getDataFundacao());
 
         db.update("time", values, "codigo = ?", new String[]{String.valueOf(time.getCodigo())});
     }
@@ -88,6 +90,7 @@ public class TimeDao implements ICRUDDao<Time> {
         time.setCodigo(cursor.getInt(0));
         time.setNome(cursor.getString(1));
         time.setCidade(cursor.getString(2));
+        time.setDataFundacao(cursor.getString(3));
         return time;
     }
 }
