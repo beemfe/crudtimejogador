@@ -4,6 +4,7 @@
 
 package br.edu.fateczl.crudtimejogador.persistence;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -92,6 +93,7 @@ public class JogadorDao implements ICRUDDao<Jogador> {
         return jogadores;
     }
 
+    @SuppressLint("Range")
     private Jogador cursorToJogador(Cursor cursor) {
         Jogador jogador = new Jogador();
         jogador.setId(cursor.getInt(cursor.getColumnIndex("id")));
