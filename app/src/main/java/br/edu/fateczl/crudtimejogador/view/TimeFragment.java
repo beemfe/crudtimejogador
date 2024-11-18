@@ -25,7 +25,7 @@ import br.edu.fateczl.crudtimejogador.persistence.TimeDao;
 
 public class TimeFragment extends Fragment {
     private View view;
-    private EditText etCodigoTime, etNomeTime, etCidadeTime;
+    private EditText etCodigoTime, etNomeTime, etCidadeTime, etDataFundacaoTime;
     private Button btnInserirTime, btnAtualizarTime, btnExcluirTime, btnBuscarTime, btnListarTime;
     private TextView tvListaTimes;
     private TimeController timeController;
@@ -45,6 +45,7 @@ public class TimeFragment extends Fragment {
         etCodigoTime = view.findViewById(R.id.etCodigoTime);
         etNomeTime = view.findViewById(R.id.etNomeTime);
         etCidadeTime = view.findViewById(R.id.etCidadeTime);
+        etDataFundacaoTime = view.findViewById(R.id.etDataFundacaoTime);
         btnInserirTime = view.findViewById(R.id.btnInserirTime);
         btnAtualizarTime = view.findViewById(R.id.btnAtualizarTime);
         btnExcluirTime = view.findViewById(R.id.btnExcluirTime);
@@ -133,6 +134,7 @@ public class TimeFragment extends Fragment {
         time.setCodigo(Integer.parseInt(etCodigoTime.getText().toString()));
         time.setNome(etNomeTime.getText().toString());
         time.setCidade(etCidadeTime.getText().toString());
+        time.setDataFundacao(etDataFundacaoTime.getText().toString());
         return time;
     }
 
@@ -140,11 +142,13 @@ public class TimeFragment extends Fragment {
         etCodigoTime.setText(String.valueOf(time.getCodigo()));
         etNomeTime.setText(time.getNome());
         etCidadeTime.setText(time.getCidade());
+        etDataFundacaoTime.setText(time.getDataFundacao());
     }
 
     private void limparCampos() {
         etCodigoTime.setText("");
         etNomeTime.setText("");
         etCidadeTime.setText("");
+        etDataFundacaoTime.setText("");
     }
 }
